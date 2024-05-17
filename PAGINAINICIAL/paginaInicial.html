@@ -11,10 +11,51 @@
 <body>
     <!-- div pt1 se refere a primeira parte do site até onde contém o ícone do whatsapp -->
     <div class="pt1">
+        <!--Links das Fontes e dos Icones-->
+        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+        <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+        <!--Sidebar-->
+        <input type="checkbox" id="check">
+        <label for="check">
+            <i class="fas fa-bars" id="btn"></i>
+            <i class="fas fa-times" id="cancel"></i>
+        </label>
+        <div class="sidebar">
+
+            <header>Menu</header>
+
+            <a href="#" class="link-sidebar active">
+                <i class="fas fa-qrcode"></i>
+                <span>Área do Paciente</span>
+            </a>
+
+            <a href="paginaConsulta.html" class="link-sidebar">
+                <i class="fas fa-link"></i>
+                <span>Consultas</span>
+            </a>
+
+            <a href="#" class="link-sidebar">
+                <i class="fas fa-edit"></i>
+                <span>Profissionais</span>
+            </a>
+            <a href="#" class="link-sidebar">
+                <i class="far fa-question-circle"></i>
+                <span>Sobre</span>
+            </a>
+
+            <a href="#" class="link-sidebar">
+                <i class="fas fa-sliders-h"></i>
+                <span>Serviços</span>
+            </a>
+
+            <a href="#" class="link-sidebar">
+                <i class="far fa-envelope"></i>
+                <span>Contato</span>
+            </a>
+        </div>
+        <!--Sidebar-->
         <header class="header">
-            <div class="buttons-container">
-                <button class="menu-button"></button>
-            </div>
+            
             <h1 class="logo">CareConnect</h1>
             <div>
                 <a href="https://google.com" class="login-button">Entrar / Cadastrar</a>
@@ -31,13 +72,14 @@
                     <h2>A plataforma feita para suas consultas online <br>
                         que lhe ajuda a com praticidade e segurança <br>
                         no conforto de sua casa. </h2>
-                    
+
                 </div>
-                <div class="botaoAgendar"><a class="agenda-button" href="paginaConsulta.html">Agendar Consulta!</a></div>
+                <div class="botaoAgendar"><a class="agenda-button" href="paginaConsulta.html">Agendar Consulta!</a>
+                </div>
                 <div class="busque">
                     <input type="text" placeholder="Busque por profissional, serviço, especialidade...">
                     <a class="button-pesquisar" href="https://google.com">Pesquisar</button>
-                    <a class="whats" href="https://google.com"></a>
+                        <a class="whats" href="https://google.com"></a>
                 </div>
             </div>
         </div>
@@ -67,7 +109,7 @@
                     <div class="slide">
                         <img src="/assets/pexels-karolina-grabowska-7195310.jpg" alt="imagem5">
                     </div>
-                    
+
                 </div>
                 <div class="manual-navigation">
                     <label for="radio1" class="manual-btn"></label>
@@ -81,57 +123,57 @@
     </div>
     <!-- div pt3 se refere a terceira parte do site onde se encontram os feedbacks dos usuários -->
     <div class="pt3">
-    <div class="feedback=title">
-        <h2>Feedback dos Pacientes</h2>
-    </div>
-    <div class="container-feedback">
-        <div class="feed1">
-            <div class="feedback-box">
-                <div class="avatar">
-                    <img src="/assets/feedbackperfil.jpg" alt="Avatar do Paciente">
+        <div class="feedback=title">
+            <h2>Feedback dos Pacientes</h2>
+        </div>
+        <div class="container-feedback">
+            <div class="feed1">
+                <div class="feedback-box">
+                    <div class="avatar">
+                        <img src="/assets/feedbackperfil.jpg" alt="Avatar do Paciente">
+                    </div>
+                    <div class="feedback">
+                        <p>O atendimento foi excelente! Estou muito satisfeito com o serviço prestado.</p>
+                        <p class="client-name">João da Silva</p>
+                    </div>
                 </div>
-                <div class="feedback">
-                    <p>O atendimento foi excelente! Estou muito satisfeito com o serviço prestado.</p>
-                    <p class="client-name">João da Silva</p>
+                <div class="feedback-box">
+                    <div class="avatar">
+                        <img src="/assets/feedbackperfil.jpg" alt="Avatar do Paciente">
+                    </div>
+                    <div class="feedback">
+                        <p>O atendimento foi excelente! Estou muito satisfeito com o serviço prestado.</p>
+                        <p class="client-name">João da Silva</p>
+                    </div>
                 </div>
             </div>
-            <div class="feedback-box">
-                <div class="avatar">
-                    <img src="/assets/feedbackperfil.jpg" alt="Avatar do Paciente">
+            <div class="feed2">
+                <div class="feedback-box">
+                    <div class="avatar">
+                        <img src="/assets/feedbackperfil.jpg" alt="Avatar do Paciente">
+                    </div>
+                    <div class="feedback">
+                        <p>O atendimento foi excelente! Estou muito satisfeito com o serviço prestado.</p>
+                        <p class="client-name">João da Silva</p>
+                    </div>
                 </div>
-                <div class="feedback">
-                    <p>O atendimento foi excelente! Estou muito satisfeito com o serviço prestado.</p>
-                    <p class="client-name">João da Silva</p>
+                <div class="feedback-box">
+                    <div class="avatar">
+                        <img src="/assets/feedbackperfil.jpg" alt="Avatar do Paciente">
+                    </div>
+                    <div class="feedback">
+                        <p>O atendimento foi excelente! Estou muito satisfeito com o serviço prestado.</p>
+                        <p class="client-name">João da Silva</p>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="feed2">
-            <div class="feedback-box">
-                <div class="avatar">
-                    <img src="/assets/feedbackperfil.jpg" alt="Avatar do Paciente">
-                </div>
-                <div class="feedback">
-                    <p>O atendimento foi excelente! Estou muito satisfeito com o serviço prestado.</p>
-                    <p class="client-name">João da Silva</p>
-                </div>
-            </div>
-            <div class="feedback-box">
-                <div class="avatar">
-                    <img src="/assets/feedbackperfil.jpg" alt="Avatar do Paciente">
-                </div>
-                <div class="feedback">
-                    <p>O atendimento foi excelente! Estou muito satisfeito com o serviço prestado.</p>
-                    <p class="client-name">João da Silva</p>
-                </div>
-            </div>
-        </div>
     </div>
-</div>
     <script src="paginaInicial.js"></script>
 </body>
 <!-- parte do site onde está o rodapé -->
 <footer class="rodape" id="contato">
-    
+
     <div class="rodape-div">
 
         <div class="rodape-div-1">
@@ -140,7 +182,7 @@
                 <!-- elemento -->
                 <!-- elemento -->
                 <span><b>CareConnect</b></span>
-                <p>Na era digital, seu cuidado está a um toque de distância. Descubra a conveniência e o 
+                <p>Na era digital, seu cuidado está a um toque de distância. Descubra a conveniência e o
                     conforto da nossa clínica online, onde sua saúde <br>é nossa prioridade.</p>
             </div>
         </div>
@@ -185,4 +227,5 @@
     </div>
     <p class="rodape-direitos">Copyright © 2023 - Todos os Direitos Reservados.</p>
 </footer>
+
 </html>
