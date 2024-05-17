@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Slider</title>
+<style>
+  .slider {
+    margin: 0 auto;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .slides {
+    width: 500%;
+    height: 100%;
+    display: flex;
+  }
+
+  .slides input {
+    display: none;
+  }
+
+  .slide {
+    width: 20%;
+    transition: .6s;
+  }
+
+  .slide img {
+    width: 100%;
+    height: auto;
+  }
+
+  .manual-navigation {
+    position: absolute;
+    width: 800px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .manual-btn {
+    border: 2px solid #fff;
+    width: 70px;
+    height: 17px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 1s;
+  }
+
+  .manual-btn:not(:last-child) {
+    margin-right: 40px;
+  }
+
+  .manual-btn:hover {
+    background-color: #14181D;
+  }
+
+  #radio1:checked ~ .first {
+    margin-left: 0%;
+  }
+
+  #radio2:checked ~ .first {
+    margin-left: -20%;
+  }
+
+  #radio3:checked ~ .first {
+    margin-left: -40%;
+  }
+
+  #radio4:checked ~ .first {
+    margin-left: -60%;
+  }
+
+  #radio5:checked ~ .first {
+    margin-left: -80%;
+  }
+  .rodape {
+    background-color: #14181D;
+    color: white;
+    height: auto;
+    width: 100%;
+    font-size: 14px;
+    font-family: helvetica;
+
+}
+
+.rodape a {
+    text-decoration: none;
+    color: white;
+}
+
+.rodape p {
+    margin-bottom: 5px;
+}
+
+.rodape-div {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin: auto;
+    align-items: stretch;
+    padding: 60px 10px 40px 10px;
+}
+
+.rodape-div-1,
+.rodape-div-2,
+.rodape-div-3,
+.rodape-div-4,
+.rodape-div-5 {
+    display: flex;
+    width: calc(100% / 5 - 20px);
+    padding: 10px;
+}
+
+.rodape span {
+    font-size: 20px;
+    color: white;
+}
+
+.rodape-direitos {
+
+    background-color: rgba(0, 0, 0, 0.363);
+    padding: 10px;
+    margin: 0px;
+    text-align: center;
+}
+
+/*mobile*/
+@media (max-width: 768px) {
+
+    .rodape-div-1,
+    .rodape-div-2,
+    .rodape-div-3,
+    .rodape-div-4 {
+        width: calc(50% - 20px);
+        padding: 10px;
+    }
+
+    .rodape-div {
+        padding: 60px 0px 40px 0px;
+    }
+}
+:root {
+  
+  --accent-color: #fff;
+  --gradient-color: #FBFBFB;
+}
+.sidebar{
+  position: fixed;
+  z-index: 999;
+  width: 240px;
+  left: -240px;
+  height: 100%;
+  background-color: #202020;
+  transition: all .5s ease;
+}
+.sidebar header{
+  font-size: 28px;
+  color: #ffffff;
+  line-height: 70px;
+  text-align: center;
+  background-color: #202020;
+  user-select: none;
+  font-family: 'Lato', sans-serif;
+}
+.sidebar .link-sidebar{
+  display: block;
+  height: 65px;
+  width: 100%;
+  color: #ffffff;
+  line-height: 65px;
+  padding-left: 30px;
+  box-sizing: border-box;
+  border-left: 5px solid transparent;
+  font-family: 'Lato', sans-serif;
+  text-decoration: none;
+  transition: all .5s ease;
+}
+.link-sidebar.active,.link-sidebar:hover{
+  border-left: 5px solid var(--accent-color);
+  color: #fff;
+   background: linear-gradient(to left, var(--accent-color), var(--gradient-color));
+}
+.sidebar .link-sidebar i{
+  font-size: 23px;
+  margin-right: 16px;
+}
+.sidebar .link-sidebar span{
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+#check{
+  display: none;
+}
+label #btn,label #cancel{
+  
+  position: fixed;
+  z-index: 999;
+  left: 5px;
+  cursor: pointer;
+  color: #ffffff;
+  border-radius: 50px;
+  margin: 15px 30px;
+  margin-left: 30px;
+  font-size: 22px;
+  background-color: #202020;
+  height: 45px;
+  width: 45px;
+  text-align: center;
+  line-height: 44px;
+  transition: all .5s ease;
+}
+label #cancel{
+  opacity: 0;
+  visibility: hidden;
+}
+#check:checked ~ .sidebar{
+  left: 0;
+}
+#check:checked ~ label #btn{
+  margin-left: 245px;
+  opacity: 0;
+  visibility: hidden;
+}
+#check:checked ~ label #cancel{
+  margin-left: 245px;
+  opacity: 1;
+  visibility: visible;
+}
+@media(max-width : 860px){
+  .sidebar{
+    height: auto;
+    width: 70px;
+    left: 0;
+    margin: 100px 0;
+  }
+  header,#btn,#cancel{
+    display: none;
+  }
+  
+  span{
+    position: absolute;
+    margin-left: 23px;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .sidebar .link-sidebar{
+    height: 60px;
+  }
+  
+  .sidebar .link-sidebar i{
+    margin-left: -10px;
+  }
+  
+  .link-sidebar:hover {
+    width: 200px;
+    background: inherit;
+  }
+  
+  .sidebar .link-sidebar:hover span{
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.sidebar > .link-sidebar.active,.sidebar > .link-sidebar:hover {
+  --accent-color: #32d7fd;
+  --gradient-color: #006bdc;
+}
+</style>
+</head>
+<body>
+  <div class="slider">
+    <div class="slides">
+      <input type="radio" name="slider" id="radio1" checked>
+      <input type="radio" name="slider" id="radio2">
+      <input type="radio" name="slider" id="radio3">
+      <input type="radio" name="slider" id="radio4">
+      <input type="radio" name="slider" id="radio5">
+      <div class="slide first">
+        <img src="/assets/pexels-tima-miroshnichenko-8376323.jpg" alt="imagem1">
+      </div>
+      <div class="slide">
+        <img src="/assets/PAGINAINICAL2.jpg" alt="imagem2">
+      </div>
+      <div class="slide">
+        <img src="/assets/pexels-imad-clicks-14558557.jpg" alt="imagem3">
+      </div>
+      <div class="slide">
+        <img src="/assets/pexels-andrea-piacquadio-3881469.jpg" alt="imagem4">
+      </div>
+      <div class="slide">
+        <img src="/assets/pexels-karolina-grabowska-7195310.jpg" alt="imagem5">
+      </div>
+    </div>
+    <div class="manual-navigation">
+      <label for="radio1" class="manual-btn"></label>
+      <label for="radio2" class="manual-btn"></label>
+      <label for="radio3" class="manual-btn"></label>
+      <label for="radio4" class="manual-btn"></label>
+      <label for="radio5" class="manual-btn"></label>
+    </div>
+  </div>
+  <div>
+    <!--Links das Fontes e dos Icones-->
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+<!--Sidebar-->
+<input type="checkbox" id="check">
+<label for="check">
+  <i class="fas fa-bars" id="btn"></i>
+  <i class="fas fa-times" id="cancel"></i>
+</label>
+<div class="sidebar">
+  
+  <header>Menu</header>
+    
+    <a href="#" class="link-sidebar active">
+      <i class="fas fa-qrcode"></i>
+      <span>Dashboard</span>
+    </a>
+    
+    <a href="#" class="link-sidebar">
+      <i class="fas fa-link"></i>
+      <span>Links</span>
+    </a>
+  
+    <a href="#" class="link-sidebar">
+       <i class="fas fa-edit"></i>
+      <span>Blog</span>
+    </a>
+    <a href="#" class="link-sidebar">
+      <i class="far fa-question-circle"></i>
+      <span>Sobre</span>
+    </a>
+    
+    <a href="#" class="link-sidebar">
+      <i class="fas fa-sliders-h"></i>
+      <span>Serviços</span>
+    </a>
+    
+    <a href="#" class="link-sidebar">
+      <i class="far fa-envelope"></i>
+      <span>Contato</span>
+    </a>
+</div>
+<!--Sidebar-->
+  </div>
+  <footer class="rodape" id="contato">
+    
+    <div class="rodape-div">
+
+        <div class="rodape-div-1">
+            <div class="rodape-div-1-coluna">
+                <!-- elemento -->
+                <!-- elemento -->
+                <!-- elemento -->
+                <span><b>CareConnect</b></span>
+                <p>Na era digital, seu cuidado está a um toque de distância. Descubra a conveniência e o 
+                    conforto da nossa clínica online, onde sua saúde <br>é nossa prioridade.</p>
+            </div>
+        </div>
+
+        <div class="rodape-div-2">
+            <div class="rodape-div-2-coluna">
+                <!-- elemento -->
+                <span><b>Contatos</b></span>
+                <p>contato@careconnect.com</p>
+                <p>+55 11 99000-0000</p>
+            </div>
+        </div>
+
+        <div class="rodape-div-5">
+            <div class="rodape-div-4-coluna">
+                <!-- elemento -->
+                <span><b>Sobre Nós</b></span>
+                <p><a href="#quemsomos">Quem somos</a></p>
+                <p><a href="#trabalhe">Trabalhe conosco</a></p>
+                <p><a href="#clinica">Faça parte do nosso corpo clínico</a></p>
+            </div>
+        </div>
+
+        <div class="rodape-div-3">
+            <div class="rodape-div-3-coluna">
+                <!-- elemento -->
+                <span><b>Serviços</b></span>
+                <p><a href="#consultas">Consultas</a></p>
+                <p><a href="#profissionais">Profissionais</a></p>
+                <p><a href="#paciente">Área do paciente</a></p>
+            </div>
+        </div>
+
+        <div class="rodape-div-4">
+            <div class="rodape-div-4-coluna">
+                <!-- elemento -->
+                <span><b>Outros</b></span>
+                <p>Políticas de Privacidade</p>
+            </div>
+        </div>
+
+    </div>
+    <p class="rodape-direitos">Copyright © 2023 - Todos os Direitos Reservados.</p>
+</footer>
+
+  <script>
+    let count = 1;
+    document.getElementById("radio1").checked = true;
+
+    setInterval(function() {
+      nextImage();
+    }, 2000);
+
+    function nextImage() {
+      count++;
+      if (count > 5) {
+        count = 1;
+      }
+      document.getElementById("radio" + count).checked = true;
+    }
+  </script>
+
+</body>
+</html>
