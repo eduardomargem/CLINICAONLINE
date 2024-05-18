@@ -16,6 +16,8 @@ body {
     background-position: bottom center;
     background-repeat: no-repeat;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     object-fit: cover;
     height: 780px;
@@ -48,6 +50,99 @@ body {
     background-color: #115434;
 }
 
+.login-box {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 5px;
+    width: 1000px;
+    text-align: left;
+    
+}
+
+.login-box h2 {
+    margin-bottom: 20px;
+    color: #167145;
+    text-align:left;
+    margin-left: 130px;
+}
+
+.login-box .input-group {
+    margin-bottom: 15px;
+    text-align: left;
+    
+}
+
+.login-box .input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #167145;
+}
+
+.login-box .input-group input {
+    width: 400px;
+    padding: 15px 20px;
+    border: 1px solid #363131;
+    border-radius: 5px;
+    background-color: #1E1E1E;
+    color: white;
+}
+
+.forgot-password {
+    display: block;
+    margin-bottom: 20px;
+    color: #167145;
+    text-decoration: none;
+    text-align:left;
+}
+
+.login-button {
+    background-color: #167145;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    width: 400px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    
+}
+
+.login-button:hover {
+    background-color: #115434;
+}
+
+.register-link {
+    margin-top: 20px;
+    text-align:left;
+}
+
+.register-link a {
+    color: #167145;
+    text-decoration: none;
+}
+
+.about-section {
+    padding: 20px;
+    background-color: #2c2c2c;
+}
+
+.about-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-around;
+}
+
+.about-column {
+    background-color: #1c1c1c;
+    width: 30%;
+    height: 100px;
+    margin: 10px;
+    border-radius: 5px;
+}
 .rodape {
     background-color: #14181D;
     color: white;
