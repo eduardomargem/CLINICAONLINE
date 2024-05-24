@@ -11,29 +11,36 @@ body {
     align-items: center;
     flex-direction: column;
     object-fit: cover;
-    height: 652px;
+    height: 100vh;
+    overflow: hidden;
 }
 
-.login-box {
+.cadastro-box {
     background-color:#313338;
     padding: 30px;
     border-radius: 5px;
     width: 440px;
-
+    
+    max-height: calc(100vh - 220px); 
+    overflow-y: auto;
+    scrollbar-width: none;
 }
 
-.login-box h2 {
+.cadastro-box h2 {
     margin-bottom: 20px;
     margin-top: 10px;
     color: white;
+
     margin-left: 130px;
 }
 
-.login-box .input-group {
+.cadastro-box .input-group {
     margin-bottom: 15px;
+
+
 }
 
-.login-box .input-group label {
+.cadastro-box .input-group label {
     display: block;
     margin-bottom: 5px;
     color: #5aa07e;
@@ -41,23 +48,17 @@ body {
     font-weight: bold;
 }
 
-.login-box .input-group input {
+.cadastro-box .input-group input {
     width: 400px;
     padding: 15px 20px;
     border: 1px solid #363131;
     border-radius: 3px;
     background-color: #1e1f22;
     color: white;
+    
 }
 
-.forgot-password {
-    display: block;
-    margin-bottom: 20px;
-    color: #5aa07e;
-    text-decoration: none;
 
-    width: 150px;
-}
 
 .login-button {
     background-color: #167145;
@@ -68,7 +69,7 @@ body {
     width: 441px;
     cursor: pointer;
     transition: background-color 0.3s;
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 .login-button:hover {
