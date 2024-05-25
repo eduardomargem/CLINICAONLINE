@@ -1,3 +1,73 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+}
+
+.header {
+    background-color: #14181D;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.pt1 {
+    background-image: url('/assets/pexels-cedric-fauntleroy-4266935.jpg');
+    background-size: cover;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    object-fit: cover;
+    height: 780px;
+}
+
+iframe {
+    width: 100%;
+    height: 600px;
+    border: 0;
+}
+.header .logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: auto;
+    margin-left: 40px;
+}
+
+.header .nav {
+    display: flex;
+    gap: 15px;
+}
+
+.header .nav a {
+    background-color: #167145;
+    color: white;
+    padding: 5px 50px;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+    margin-right: 30px;
+}
+
+.header .nav a:hover {
+    background-color: #115434;
+}
+
+.cadastro-box {
+    background-color:#313338;
+    padding: 30px;
+    border-radius: 5px;
+    width: 1400px;
+    max-height: calc(100vh -120px); 
+    overflow-y: auto;
+    scrollbar-width: none;
+    margin-top: 5px;
+}
+
+
 .rodape {
     background-color: #14181D;
     color: white;
@@ -49,18 +119,3 @@
     text-align: center;
 }
 
-/*mobile*/
-@media (max-width: 768px) {
-
-    .rodape-div-1,
-    .rodape-div-2,
-    .rodape-div-3,
-    .rodape-div-4 {
-        width: calc(50% - 20px);
-        padding: 10px;
-    }
-
-    .rodape-div {
-        padding: 60px 0px 40px 0px;
-    }
-}
