@@ -7,47 +7,66 @@
   <link rel="stylesheet" type="text/css" href="paginaConsulta.css">
 </head>
 <body>
+    
     <div class="header">
         <div class="logo">CareConnect</div>
         <div class="nav">
-            <a href="#">Ajuda (FAQ)</a>
+            <a href="/PAGINAINICIAL/paginaInicial.html">Ajuda (FAQ)</a>
             <a href="#">Consultas</a>
             <a href="#">Profissionais</a>
-            <a href="#">Área do Paciente</a>
+            <a href="/PAGINAPACIENTE/paginaPaciente.html">Área do Paciente</a>
         </div>
     </div>
     <div class="pt1">
         <div class="cadastro-box">
-            <h2>Histórico de Consultas</h2>
-            <form>
-                <div class="input-group">
-                    <label for="email">NOME *</label>
-                    <input type="text" id="email" name="email" required placeholder="Insira o nome">
+            <h2>Agendamento de Consultas</h2>
+            <form class="form">
+                <div class="box-div-1">
+                <div class="input-group1">
+                    <label for="">ESPECIALIDADES</label>
+                <select id="especialidades">
+                    <option value="Clínica Geral">Clínica Geral</option>
+                    <option value="Cardiologia">Cardiologia</option>
+                    <option value="Oftalmologia">Oftalmologia</option>
+                    <option value="Ginecologia">Ginecologia</option>
+                    <option value="Neurologia">Neurologia</option>
+                    <option value="Nutricionista">Nutricionista</option>
+                </select>
+                    
                 </div>
-                <div class="input-group">
-                    <label for="email">E-MAIL *</label>
-                    <input type="text" id="email" name="email" required placeholder="Insira o e-mail">
+                <div class="input-group1">
+                    <label for="data">DATA</label>
+                    <input type="date" id="data-consulta" name="data-consulta">
                 </div>
-                <div class="input-group">
-                    <label for="email">CPF *</label>
-                    <input type="text" id="email" name="email" required placeholder="Insira o CPF">
+            </div>
+                <div class="box-div-2">
+                <div class="input-group2">
+                    <label for="email">VALOR</label>
+                    <input type="number" id="valor" name="valor" placeholder="Valor a ser pago">
                 </div>
-                <div class="input-group">
-                    <label for="password">SENHA *</label>
-                    <input type="password" id="password" name="password" required placeholder="Insira a senha">
+                <div class="input-group2">
+                    <label for="password">FORMA DE PAGAMENTO</label>
+                    <select id="forma-pagamento" name="forma-pagamento">
+                        <option value="credito">Cartão de Crédito</option>
+                        <option value="debito">Cartão de Débito</option>
+                        <option value="boleto">Boleto</option>
+                        <option value="pix">Pix</option>
+                    </select>
                 </div>
-                <div class="input-group">
-                    <label for="password">CONFIRME A SENHA *</label>
-                    <input type="password" id="password" name="password" required placeholder="Confirme a senha">
+                <div class="input-group2">
+                    <label for="parcelamento">PARCELAMENTO</label>
+                <select id="parcelamento" name="parcelamento">
+                    <option value="1">1x</option>
+                    <option value="2">2x</option>
+                    <option value="3">3x</option>
+                    <option value="4">4x</option>
+                    <option value="5">5x</option>
+                    <option value="6">6x</option>
+                </select>
                 </div>
-                <div class="input-group">
-                    <label for="data-nascimento">DATA DE NASCIMENTO *</label>
-                    <input type="date" id="data-nascimento" name="data-nascimento">
-                </div>
-                <p class="register-link"> <input type="checkbox" name="checkbox">  Aceito receber e-mais com noticias e atualizações da CareConnect, além de dicas e ofertas especiais. Você pode mudar isso a qualquer momento.</p>           
-                <button type="submit" class="login-button">Cadastrar</button>
-                <p class="register-link">Ao registrar, você concorda com os <a href="https://www.gov.br/governodigital/pt-br/privacidade-e-seguranca/ppsi/modelo_politica_controle_acesso.pdf">termos de serviço</a> e a <a href="https://www.gov.br/governodigital/pt-br/privacidade-e-seguranca/ppsi/modelo_politica_controle_acesso.pdf">política de privacidade </a>do CareConnect.</p>
-                <p class="register-link"><a href="/PAGINALOGIN/paginaLogin.html">Já possui uma conta?</a></p>
+                <button type="submit" class="login-button">Agendar consulta</button>
+             </div>
+                
             </form>
         </div>
     </div>

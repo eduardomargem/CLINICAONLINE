@@ -13,20 +13,24 @@
 
     <div class="login-box">
         <h2>Seja Bem-Vindo!</h2>
-        <form>
+        <form id="formularioLogin" onsubmit="event.preventDefault(); realizarLogin();">
             <div class="input-group">
                 <label for="email">E-MAIL OU CPF</label>
                 <input type="text" id="email" name="email" required placeholder="Insira o e-mail">
             </div>
             <div class="input-group">
                 <label for="password">SENHA</label>
-                <input type="password" id="password" name="password" required placeholder="Insira a senha">
+                <input type="password" id="senha" name="senha" required placeholder="Insira a senha">
             </div>
             <p class="register-link"><a href="#" class="forgot-password">Esqueceu a senha?</a></p>
             <button type="submit" class="login-button">Entrar</button>
             <p class="register-link">Ainda não tem um cadastro? <a href="/PAGINACADASTRO/paginaCadastro.html">REGISTRE-SE</a></p>
         </form>
     </div>
+    <script src="paginaLogin.js"></script>
 </body>
 
 </html>
+
+
+

@@ -378,22 +378,6 @@ input[type="text"] {
     text-align: center;
 }
 
-/*mobile*/
-@media (max-width: 768px) {
-
-    .rodape-div-1,
-    .rodape-div-2,
-    .rodape-div-3,
-    .rodape-div-4 {
-        width: calc(50% - 20px);
-        padding: 10px;
-    }
-
-    .rodape-div {
-        padding: 60px 0px 40px 0px;
-    }
-}
-
 :root {
   
     --accent-color: #fff;

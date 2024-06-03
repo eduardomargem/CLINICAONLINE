@@ -13,10 +13,10 @@
 
     <div class="cadastro-box">
         <h2>Criar uma conta</h2>
-        <form>
+        <form id="formularioRegistro" onsubmit="event.preventDefault(); registrar();">
             <div class="input-group">
                 <label for="email">NOME *</label>
-                <input type="text" id="email" name="email" required placeholder="Insira o nome">
+                <input type="text" id="nome" name="nome" required placeholder="Insira o nome">
             </div>
             <div class="input-group">
                 <label for="email">E-MAIL *</label>
@@ -24,19 +24,19 @@
             </div>
             <div class="input-group">
                 <label for="email">CPF *</label>
-                <input type="text" id="email" name="email" required placeholder="Insira o CPF">
+                <input type="text" id="cpf" name="cpf" required placeholder="Insira o CPF">
             </div>
             <div class="input-group">
                 <label for="password">SENHA *</label>
-                <input type="password" id="password" name="password" required placeholder="Insira a senha">
+                <input type="password" id="senha" name="senha" required placeholder="Insira a senha">
             </div>
             <div class="input-group">
                 <label for="password">CONFIRME A SENHA *</label>
-                <input type="password" id="password" name="password" required placeholder="Confirme a senha">
+                <input type="password" id="confirmarSenha" name="confirmarSenha" required placeholder="Confirme a senha">
             </div>
             <div class="input-group">
                 <label for="data-nascimento">DATA DE NASCIMENTO *</label>
-                <input type="date" id="data-nascimento" name="data-nascimento">
+                <input type="date" id="data-nascimento" required name="data-nascimento">
             </div>
             <p class="register-link"> <input type="checkbox" name="checkbox">  Aceito receber e-mais com noticias e atualizações da CareConnect, além de dicas e ofertas especiais. Você pode mudar isso a qualquer momento.</p>           
             <button type="submit" class="login-button">Cadastrar</button>
@@ -44,6 +44,9 @@
             <p class="register-link"><a href="/PAGINALOGIN/paginaLogin.html">Já possui uma conta?</a></p>
         </form>
     </div>
+    <script src="paginaCadastro.js"></script>
 </body>
 
 </html>
+
+

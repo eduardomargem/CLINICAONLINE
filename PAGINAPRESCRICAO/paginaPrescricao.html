@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareConnect - Histórico de Consultas</title>
+    <link rel="stylesheet" href="paginaPrescricao.css">
+</head>
+<body>
+    <header>
+        <div class="logo">CareConnect</div>
+        <nav>
+            <ul>
+                <li><a href="#">Ajuda (FAQ)</a></li>
+                <li><a href="#">Consultas</a></li>
+                <li><a href="#">Profissionais</a></li>
+                <li><a href="#">Área de Paciente</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <h1>Histórico de consultas</h1>
+            <div class="content">
+                <div class="lista-consultas">
+                    <h2>Lista de Consultas</h2>
+                    <ul>
+                        <li data-consulta="clinica-geral"><span>CLÍNICA GERAL</span> <span>Dr. João</span></li>
+                        <li data-consulta="cardiologia"><span>CARDIOLOGIA</span> <span>Dr. Felipe</span></li>
+                        <li data-consulta="oftalmologia"><span>OFTALMOLOGIA</span> <span>Dr. Fernando</span></li>
+                        <li data-consulta="ginecologia"><span>GINECOLOGIA</span> <span>Dr. Rosana</span></li>
+                        <li data-consulta="neurologia"><span>NEUROLOGIA</span> <span>Dr. Marilene</span></li>
+                        <li data-consulta="nutricionista"><span>NUTRICIONISTA</span> <span>Dr. Paloma</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Pop-up modal -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close-button" id="close-button">&times;</span>
+            <h2>Diagnósticos e Tratamentos</h2>
+            <div class="diagnosticos">
+                <h3>Diagnósticos</h3>
+                <ul id="diagnosticos-list"></ul>
+            </div>
+            <div class="tratamentos">
+                <h3>Tratamentos</h3>
+                <ul id="tratamentos-list"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="paginaPrescricao.js"></script>
+</body>
+</html>
