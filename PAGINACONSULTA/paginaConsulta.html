@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pagina de Consultas</title>
-  <link rel="stylesheet" type="text/css" href="paginaConsulta.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina de Consultas</title>
+    <link rel="stylesheet" type="text/css" href="paginaConsulta.css">
 </head>
+
 <body>
-    
+
     <div class="header">
         <div class="logo">CareConnect</div>
         <div class="nav">
@@ -20,110 +22,161 @@
     <div class="pt1">
         <div class="cadastro-box">
             <h2>Agendamento de Consultas</h2>
-            <form class="form">
+            <form class="form" id="consulta-form">
                 <div class="box-div-1">
-                <div class="input-group1">
-                    <label for="">ESPECIALIDADES</label>
-                <select id="especialidades">
-                    <option value="Clínica Geral">Clínica Geral</option>
-                    <option value="Cardiologia">Cardiologia</option>
-                    <option value="Oftalmologia">Oftalmologia</option>
-                    <option value="Ginecologia">Ginecologia</option>
-                    <option value="Neurologia">Neurologia</option>
-                    <option value="Nutricionista">Nutricionista</option>
-                </select>
-                    
+                    <div class="input-group1">
+                        <label for="especialidades">ESPECIALIDADES</label>
+                        <select id="especialidades">
+                            <option value="" disabled selected>Selecione uma especialidade</option>
+                            <option value="Alergologia">Alergologia</option>
+                            <option value="Cardiologia">Cardiologia</option>
+                            <option value="Clínica Geral">Clínica Geral</option>
+                            <option value="Dermatologia">Dermatologia</option>
+                            <option value="Endocrinologia">Endocrinologia</option>
+                            <option value="Gastroenterologia">Gastroenterologia</option>
+                            <option value="Ginecologia">Ginecologia</option>
+                            <option value="Infectologia">Infectologia</option>
+                            <option value="Medicina esportiva">Medicina esportiva</option>
+                            <option value="Neurologia">Neurologia</option>
+                            <option value="Nutricionista">Nutricionista</option>
+                            <option value="Nutrição">Nutrição</option>
+                            <option value="Oftalmologia">Oftalmologia</option>
+                            <option value="Oncologia">Oncologia</option>
+                            <option value="Ortopedia">Ortopedia</option>
+                            <option value="Otorrinolaringologia">Otorrinolaringologia (ORL)</option>
+                            <option value="Pediatria">Pediatria</option>
+                            <option value="Psiquiatria">Psiquiatria</option>
+                            <option value="Psicologia">Psicologia</option>
+                            <option value="Reumatologia">Reumatologia</option>
+                            <option value="Urologia">Urologia</option>
+                        </select>
+
+                    </div>
+                    <div class="input-group1">
+                        <label for="data-consulta">DATA</label>
+                        <input type="date" id="data-consulta" name="data-consulta">
+                    </div>
                 </div>
-                <div class="input-group1">
-                    <label for="data">DATA</label>
-                    <input type="date" id="data-consulta" name="data-consulta">
-                </div>
-            </div>
                 <div class="box-div-2">
-                <div class="input-group2">
-                    <label for="email">VALOR</label>
-                    <input type="number" id="valor" name="valor" placeholder="Valor a ser pago">
+                    <div class="input-group2">
+                        <label for="valor">VALOR</label>
+                        <input type="text" id="valor" name="valor" placeholder="Valor a ser pago">
+                    </div>
+                    <div class="input-group2">
+                        <label for="forma-pagamento">FORMA DE PAGAMENTO</label>
+                        <select id="forma-pagamento" name="forma-pagamento">
+                            <option value="" disabled selected>Selecione a forma de pagamento</option>
+                            <option value="credito">Cartão de Crédito</option>
+                            <option value="debito">Cartão de Débito</option>
+                            <option value="boleto">Boleto</option>
+                            <option value="pix">Pix</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="login-button">Agendar consulta</button>
                 </div>
-                <div class="input-group2">
-                    <label for="password">FORMA DE PAGAMENTO</label>
-                    <select id="forma-pagamento" name="forma-pagamento">
-                        <option value="credito">Cartão de Crédito</option>
-                        <option value="debito">Cartão de Débito</option>
-                        <option value="boleto">Boleto</option>
-                        <option value="pix">Pix</option>
-                    </select>
-                </div>
-                <div class="input-group2">
-                    <label for="parcelamento">PARCELAMENTO</label>
-                <select id="parcelamento" name="parcelamento">
-                    <option value="1">1x</option>
-                    <option value="2">2x</option>
-                    <option value="3">3x</option>
-                    <option value="4">4x</option>
-                    <option value="5">5x</option>
-                    <option value="6">6x</option>
-                </select>
-                </div>
-                <button type="submit" class="login-button">Agendar consulta</button>
-             </div>
-                
+
             </form>
         </div>
     </div>
+    <div id="payment-popup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <h2>Pagamento</h2>
+            <form class="form" id="pagamento-form">
+                <div class="box-div-1">
+                    <div class="input-group1">
+                        <label for="nome">NOME COMPLETO</label>
+                        <input type="text" id="nome" name="nome" placeholder="Nome Completo">
+                    </div>
+                    <div class="input-group1">
+                        <label for="email">E-MAIL</label>
+                        <input type="email" id="email" name="email" placeholder="E-mail">
+                    </div>
+                    <div class="input-group1">
+                        <label for="endereco">ENDEREÇO</label>
+                        <input type="text" id="endereco" name="endereco" placeholder="Endereço">
+                    </div>
+                </div>
+                
+                <div class="box-div-2">
+                    <div class="input-group2">
+                        <label for="numero-cartao">NÚMERO DO CARTÃO</label>
+                        <input type="text" id="numero-cartao" name="numero-cartao" placeholder="Número do Cartão">
+                    </div>
+                    <div class="input-group2">
+                        <label for="validade">VALIDADE</label>
+                        <input type="text" id="validade" name="validade" placeholder="MM/AA">
+                    </div>
+                    <div class="input-group2">
+                        <label for="cvv">CVV</label>
+                        <input type="text" id="cvv" name="cvv" placeholder="CVV">
+                    </div>
+                    <div class="input-group1">
+                        <label for="parcelamento">PARCELAS</label>
+                        <select id="parcelamento" name="parcelamento" placeholder="Número de Parcelas">
+                            <option value="" disabled selected>Selecione o número de parcelas</option>
+                            <option value="1">1x</option>
+                            <option value="2">2x</option>
+                            <option value="3">3x</option>
+                            <option value="4">4x</option>
+                            <option value="5">5x</option>
+                            <option value="6">6x</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="payment-button">Pagar</button>
+            </form>
+        </div>
+    </div>
+    <footer class="rodape" id="contato">
+        <div class="rodape-div">
+            <div class="rodape-div-1">
+                <div class="rodape-div-1-coluna">
+                    <span><b>CareConnect</b></span>
+                    <p>Na era digital, seu cuidado está a um toque de distância. Descubra a conveniência e o
+                        conforto da nossa clínica online, onde sua saúde <br>é nossa prioridade.</p>
+                </div>
+            </div>
+
+            <div class="rodape-div-2">
+                <div class="rodape-div-2-coluna">
+                    <span><b>Contatos</b></span>
+                    <p>contato@careconnect.com</p>
+                    <p>+55 11 99000-0000</p>
+                </div>
+            </div>
+
+            <div class="rodape-div-5">
+                <div class="rodape-div-4-coluna">
+                    <span><b>Sobre Nós</b></span>
+                    <p><a href="#quemsomos">Quem somos</a></p>
+                    <p><a href="#trabalhe">Trabalhe conosco</a></p>
+                    <p><a href="#clinica">Faça parte do nosso corpo clínico</a></p>
+                </div>
+            </div>
+
+            <div class="rodape-div-3">
+                <div class="rodape-div-3-coluna">
+                    <span><b>Serviços</b></span>
+                    <p><a href="#consultas">Consultas</a></p>
+                    <p><a href="#profissionais">Profissionais</a></p>
+                    <p><a href="#paciente">Área do paciente</a></p>
+                </div>
+            </div>
+
+            <div class="rodape-div-4">
+                <div class="rodape-div-4-coluna">
+                    <span><b>Outros</b></span>
+                    <p>Políticas de Privacidade</p>
+                </div>
+            </div>
+        </div>
+        <p class="rodape-direitos">Copyright © 2023 - Todos os Direitos Reservados.</p>
+    </footer>
+
+    <script src="paginaConsulta.js"></script>
+
 </body>
-<footer class="rodape" id="contato">
 
-  <div class="rodape-div">
-
-      <div class="rodape-div-1">
-          <div class="rodape-div-1-coluna">
-              <!-- elemento -->
-              <!-- elemento -->
-              <!-- elemento -->
-              <span><b>CareConnect</b></span>
-              <p>Na era digital, seu cuidado está a um toque de distância. Descubra a conveniência e o
-                  conforto da nossa clínica online, onde sua saúde <br>é nossa prioridade.</p>
-          </div>
-      </div>
-
-      <div class="rodape-div-2">
-          <div class="rodape-div-2-coluna">
-              <!-- elemento -->
-              <span><b>Contatos</b></span>
-              <p>contato@careconnect.com</p>
-              <p>+55 11 99000-0000</p>
-          </div>
-      </div>
-
-      <div class="rodape-div-5">
-          <div class="rodape-div-4-coluna">
-              <!-- elemento -->
-              <span><b>Sobre Nós</b></span>
-              <p><a href="#quemsomos">Quem somos</a></p>
-              <p><a href="#trabalhe">Trabalhe conosco</a></p>
-              <p><a href="#clinica">Faça parte do nosso corpo clínico</a></p>
-          </div>
-      </div>
-
-      <div class="rodape-div-3">
-          <div class="rodape-div-3-coluna">
-              <!-- elemento -->
-              <span><b>Serviços</b></span>
-              <p><a href="#consultas">Consultas</a></p>
-              <p><a href="#profissionais">Profissionais</a></p>
-              <p><a href="#paciente">Área do paciente</a></p>
-          </div>
-      </div>
-
-      <div class="rodape-div-4">
-          <div class="rodape-div-4-coluna">
-              <!-- elemento -->
-              <span><b>Outros</b></span>
-              <p>Políticas de Privacidade</p>
-          </div>
-      </div>
-
-  </div>
-  <p class="rodape-direitos">Copyright © 2023 - Todos os Direitos Reservados.</p>
-</footer>
 </html>
