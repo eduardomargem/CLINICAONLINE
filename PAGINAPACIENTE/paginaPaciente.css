@@ -1,0 +1,314 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.header .logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: auto;
+    margin-left: 40px;
+    text-decoration: none;
+}
+.logo{
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    
+    text-decoration: none;
+}
+.pt1 {
+    background-image: url('/assets/pexels-cedric-fauntleroy-4266935.jpg');
+    background-size: cover;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    object-fit: cover;
+    height: 780px;
+}
+
+
+.container {
+    background-color: #14181D;
+    padding: 20px;
+    border-radius: 3px;
+    color: white;
+    width: 800px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+}
+
+.container h1 {
+    margin-bottom: 20px;
+}
+
+.content {
+    display: flex;
+}
+
+.lista-consultas, .diagnosticos-tratamentos {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.lista-consultas h2, .diagnosticos-tratamentos h2 {
+    margin-bottom: 10px;
+}
+
+.lista-consultas ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.lista-consultas ul li {
+    background-color: rgba(255, 255, 255, 0.1);
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.diagnosticos, .tratamentos {
+    margin-bottom: 20px;
+}
+
+.diagnosticos h3, .tratamentos h3 {
+    margin-bottom: 10px;
+}
+
+.diagnosticos ul li, .tratamentos ul li {
+    background-color: rgba(255, 255, 255, 0.1);
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #14181D;
+    padding: 20px;
+    border: 1px solid #363131;
+    width: 80%;
+    border-radius: 3px;
+}
+
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal h2 {
+    color: white;
+}
+
+.modal .diagnosticos ul,
+.modal .tratamentos ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.modal .diagnosticos ul li,
+.modal .tratamentos ul li {
+    background-color: rgba(255, 255, 255, 0.1);
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 3px;
+    color: white;
+}
+.modal .diagnosticos ,
+.modal .tratamentos  {
+    background-color: rgba(255, 255, 255, 0.1);
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 3px;
+    color: white;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #14181D;
+    color: white;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #14181D;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 1;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #5aa07e;
+}
+
+.user-info, .login-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#user-photo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+#user-name {
+    font-weight: bold;
+    color: #5aa07e;
+}
+
+#logout-button, #login-button {
+    padding: 5px 10px;
+    background-color: #363131;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#logout-button:hover, #login-button:hover {
+    background-color: #5aa07e;
+}
+
+.hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s;
+}
+
+.nav-links.active {
+    display: flex;
+}
+
+@media (min-width: 769px) {
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        width: auto;
+        padding: 0;
+    }
+
+    .nav-links a {
+        padding: 0;
+    }
+
+    .hamburger-menu {
+        display: none;
+    }
+}
+
+.rodape {
+    background-color: #14181D;
+    color: white;
+    height: auto;
+    width: 100%;
+    font-size: 14px;
+    font-family: helvetica;
+
+}
+
+.rodape a {
+    text-decoration: none;
+    color: white;
+}
+
+.rodape p {
+    margin-bottom: 5px;
+}
+
+.rodape-div {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin: auto;
+    align-items: stretch;
+    padding: 60px 10px 40px 10px;
+}
+
+.rodape-div-1,
+.rodape-div-2,
+.rodape-div-3,
+.rodape-div-4,
+.rodape-div-5 {
+    display: flex;
+    width: calc(100% / 5 - 20px);
+    padding: 10px;
+}
+
+.rodape span {
+    font-size: 20px;
+    color: white;
+}
+
+.rodape-direitos {
+
+    background-color: rgba(0, 0, 0, 0.363);
+    padding: 10px;
+    margin: 0px;
+    text-align: center;
+}

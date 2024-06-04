@@ -10,14 +10,29 @@
 
 <body>
 
-    <div class="header">
-        <div class="logo">CareConnect</div>
-        <div class="nav">
+    <header class="navbar">
+        <a class="logo" href="/PAGINAINICIAL/paginaInicial.html">CareConnect</a>
+        <nav class="nav-links" id="nav-links">
             <a href="/PAGINAINICIAL/paginaInicial.html">Ajuda (FAQ)</a>
             <a href="#">Consultas</a>
             <a href="#">Profissionais</a>
             <a href="/PAGINAPACIENTE/paginaPaciente.html">Área do Paciente</a>
+        </nav>
+        <div id="user-info" class="user-info">
+            <img id="user-photo" src="/assets/feedbackperfil.jpg" alt="Foto do Usuário">
+            <span id="user-name"></span>
+            <button id="logout-button">Sair</button>
         </div>
+        <div id="login-option" class="login-option">
+            <button id="login-button">Login</button>
+        </div>
+        <div class="hamburger-menu" id="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
     </div>
     <div class="pt1">
         <div class="cadastro-box">
@@ -72,7 +87,7 @@
                             <option value="pix">Pix</option>
                         </select>
                     </div>
-                    
+
                     <button type="submit" class="login-button">Agendar consulta</button>
                 </div>
 
@@ -98,7 +113,7 @@
                         <input type="text" id="endereco" name="endereco" placeholder="Endereço">
                     </div>
                 </div>
-                
+
                 <div class="box-div-2">
                     <div class="input-group2">
                         <label for="numero-cartao">NÚMERO DO CARTÃO</label>

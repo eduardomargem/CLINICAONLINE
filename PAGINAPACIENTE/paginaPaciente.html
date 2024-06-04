@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareConnect</title>
+    <link rel="stylesheet" href="paginaPaciente.css">
+</head>
+<body>
+    <header class="navbar">
+        <a class="logo" href="/PAGINAINICIAL/paginaInicial.html">CareConnect</a>
+        <nav class="nav-links" id="nav-links">
+            <a href="/PAGINAINICIAL/paginaInicial.html">Ajuda (FAQ)</a>
+            <a href="#">Consultas</a>
+            <a href="#">Profissionais</a>
+            <a href="/PAGINAPACIENTE/paginaPaciente.html">Área do Paciente</a>
+        </nav>
+        <div id="user-info" class="user-info">
+            <img id="user-photo" src="/assets/feedbackperfil.jpg" alt="Foto do Usuário">
+            <span id="user-name"></span>
+            <button id="logout-button">Sair</button>
+        </div>
+        <div id="login-option" class="login-option">
+            <button id="login-button">Login</button>
+        </div>
+        <div class="hamburger-menu" id="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+    <div class="pt1">
+        <div class="container">
+            <h1>Histórico de consultas</h1>
+            <div class="content">
+                <div class="lista-consultas">
+                    <h2>Lista de Consultas</h2>
+                    <ul>
+                        <li data-consulta="clinica-geral"><span>CLÍNICA GERAL</span> <span>Dr. João</span></li>
+                        <li data-consulta="cardiologia"><span>CARDIOLOGIA</span> <span>Dr. Felipe</span></li>
+                        <li data-consulta="oftalmologia"><span>OFTALMOLOGIA</span> <span>Dr. Fernando</span></li>
+                        <li data-consulta="ginecologia"><span>GINECOLOGIA</span> <span>Dr. Rosana</span></li>
+                        <li data-consulta="neurologia"><span>NEUROLOGIA</span> <span>Dr. Marilene</span></li>
+                        <li data-consulta="nutricionista"><span>NUTRICIONISTA</span> <span>Dr. Paloma</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Pop-up modal -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close-button" id="close-button">&times;</span>
+            <h2>Diagnósticos e Tratamentos</h2>
+            <div class="diagnosticos">
+                <h3>Diagnósticos</h3>
+                <ul id="diagnosticos-list"></ul>
+            </div>
+            <div class="tratamentos">
+                <h3>Tratamentos</h3>
+                <ul id="tratamentos-list"></ul>
+            </div>
+        </div>
+    </div>
+    <footer class="rodape" id="contato">
+        <div class="rodape-div">
+            <div class="rodape-div-1">
+                <div class="rodape-div-1-coluna">
+                    <span><b>CareConnect</b></span>
+                    <p>Na era digital, seu cuidado está a um toque de distância. Descubra a conveniência e o
+                        conforto da nossa clínica online, onde sua saúde <br>é nossa prioridade.</p>
+                </div>
+            </div>
+
+            <div class="rodape-div-2">
+                <div class="rodape-div-2-coluna">
+                    <span><b>Contatos</b></span>
+                    <p>contato@careconnect.com</p>
+                    <p>+55 11 99000-0000</p>
+                </div>
+            </div>
+
+            <div class="rodape-div-5">
+                <div class="rodape-div-4-coluna">
+                    <span><b>Sobre Nós</b></span>
+                    <p><a href="#quemsomos">Quem somos</a></p>
+                    <p><a href="#trabalhe">Trabalhe conosco</a></p>
+                    <p><a href="#clinica">Faça parte do nosso corpo clínico</a></p>
+                </div>
+            </div>
+
+            <div class="rodape-div-3">
+                <div class="rodape-div-3-coluna">
+                    <span><b>Serviços</b></span>
+                    <p><a href="#consultas">Consultas</a></p>
+                    <p><a href="#profissionais">Profissionais</a></p>
+                    <p><a href="#paciente">Área do paciente</a></p>
+                </div>
+            </div>
+
+            <div class="rodape-div-4">
+                <div class="rodape-div-4-coluna">
+                    <span><b>Outros</b></span>
+                    <p>Políticas de Privacidade</p>
+                </div>
+            </div>
+        </div>
+        <p class="rodape-direitos">Copyright © 2023 - Todos os Direitos Reservados.</p>
+    </footer>
+    <script src="paginaPaciente.js"></script>
+</body>
+</html>

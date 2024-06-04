@@ -129,67 +129,67 @@ selectEspecialidades.addEventListener('change', function() {
     // Define o valor com base na especialidade selecionada
     switch (especialidadeSelecionada) {
         case 'Alergologia':
-            inputValor.value = "50.00"; // Valor para Alergologia
+            inputValor.value = "50.00";
             break;
         case 'Cardiologia':
-            inputValor.value = "80.00"; // Valor para Cardiologia
+            inputValor.value = "80.00";
             break;
         case 'Clínica Geral':
-            inputValor.value = "60.00"; // Valor para Clínica Geral
+            inputValor.value = "60.00";
             break;
         case 'Dermatologia':
-            inputValor.value = "70.00"; // Valor para Dermatologia
+            inputValor.value = "70.00"; 
             break;
         case 'Endocrinologia':
-            inputValor.value = "75.00"; // Valor para Endocrinologia
+            inputValor.value = "75.00"; 
             break;
         case 'Gastroenterologia':
-            inputValor.value = "65.00"; // Valor para Gastroenterologia
+            inputValor.value = "65.00";
             break;
         case 'Ginecologia':
-            inputValor.value = "70.00"; // Valor para Ginecologia
+            inputValor.value = "70.00";
             break;
         case 'Infectologia':
-            inputValor.value = "55.00"; // Valor para Infectologia
+            inputValor.value = "55.00"; 
             break;
         case 'Medicina esportiva':
-            inputValor.value = "80.00"; // Valor para Medicina esportiva
+            inputValor.value = "80.00"; 
             break;
         case 'Neurologia':
-            inputValor.value = "75.00"; // Valor para Neurologia
+            inputValor.value = "75.00"; 
             break;
         case 'Nutricionista':
-            inputValor.value = "60.00"; // Valor para Nutricionista
+            inputValor.value = "60.00";
             break;
         case 'Nutrição':
-            inputValor.value = "60.00"; // Valor para Nutrição
+            inputValor.value = "60.00"; 
             break;
         case 'Oftalmologia':
-            inputValor.value = "70.00"; // Valor para Oftalmologia
+            inputValor.value = "70.00"; 
             break;
         case 'Oncologia':
-            inputValor.value = "85.00"; // Valor para Oncologia
+            inputValor.value = "85.00"; 
             break;
         case 'Ortopedia':
-            inputValor.value = "75.00"; // Valor para Ortopedia
+            inputValor.value = "75.00"; 
             break;
         case 'Otorrinolaringologia':
-            inputValor.value = "70.00"; // Valor para Otorrinolaringologia (ORL)
+            inputValor.value = "70.00"; 
             break;
         case 'Pediatria':
-            inputValor.value = "55.00"; // Valor para Pediatria
+            inputValor.value = "55.00"; 
             break;
         case 'Psiquiatria':
-            inputValor.value = "75.00"; // Valor para Psiquiatria
+            inputValor.value = "75.00"; 
             break;
         case 'Psicologia':
-            inputValor.value = "65.00"; // Valor para Psicologia
+            inputValor.value = "65.00"; 
             break;
         case 'Reumatologia':
-            inputValor.value = "80.00"; // Valor para Reumatologia
+            inputValor.value = "80.00";
             break;
         case 'Urologia':
-            inputValor.value = "70.00"; // Valor para Urologia
+            inputValor.value = "70.00"; 
             break;
         default:
             inputValor.value = ""; // Define um valor padrão ou vazio se a especialidade não estiver definida
@@ -205,4 +205,57 @@ selectEspecialidades.addEventListener('change', function() {
 
     // Torna o campo de valor somente leitura
     inputValor.readOnly = true;
+});
+
+
+// script.js
+document.addEventListener('DOMContentLoaded', function() {
+    const isLoggedIn = () => {
+        return localStorage.getItem('loggedIn') === 'true';
+    };
+
+    const setUserLoggedIn = (loggedIn) => {
+        localStorage.setItem('loggedIn', loggedIn ? 'true' : 'false');
+        updateNavbar();
+    };
+
+    const getUserName = () => {
+        return "Usuário";
+    };
+
+    const getUserPhoto = () => {
+        return "/assets/feedbackperfil.jpg";
+    };
+
+    const updateNavbar = () => {
+        if (isLoggedIn()) {
+            document.getElementById('user-name').textContent = getUserName();
+            document.getElementById('user-photo').src = getUserPhoto();
+            document.getElementById('user-info').style.display = 'flex';
+            document.getElementById('login-option').style.display = 'none';
+        } else {
+            document.getElementById('user-info').style.display = 'none';
+            document.getElementById('login-option').style.display = 'flex';
+        }
+    };
+
+    document.getElementById('logout-button').addEventListener('click', function() {
+        alert('Logout realizado com sucesso!');
+        setUserLoggedIn(false);
+        window.location.href = "/PAGINAINICIAL/paginaInicial.html"; 
+    });
+
+    document.getElementById('login-button').addEventListener('click', function() {
+        alert('Redirecionando para a página de login...');
+        setUserLoggedIn(true);
+    });
+
+    const hamburgerMenu = document.getElementById('hamburger-menu');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburgerMenu.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+
+    updateNavbar();
 });
