@@ -122,3 +122,62 @@ document.addEventListener('DOMContentLoaded', function() {
 
     updateNavbar();
 });
+// Get the modal
+var modalPopup = document.getElementById("consultationModal");
+
+// Get the <span> element that closes the modal
+var closeButton = document.getElementsByClassName("close-button")[0];
+
+// Get the elements to display consultation details
+var consultationDetails = document.getElementById("consultationDetails");
+var consultationLocation = document.getElementById("consultationLocation");
+var consultationContact = document.getElementById("consultationContact");
+var consultationStatus = document.getElementById("consultationStatus");
+var consultationInstructions = document.getElementById("consultationInstructions");
+var consultationNotes = document.getElementById("consultationNotes");
+
+// Get the video conference button
+var videoConferenceButton = document.getElementById("videoConferenceButton");
+
+// Function to open the modal with the consultation details
+function openModal(details, location, contact, status, instructions, notes, videoLink) {
+    consultationDetails.innerText = details;
+    consultationLocation.innerText = location;
+    consultationContact.innerText = contact;
+    consultationStatus.innerText = status;
+    consultationInstructions.innerText = instructions;
+    consultationNotes.innerText = notes;
+    videoConferenceButton.onclick = function() {
+        window.location.href = videoLink;
+    };
+    modalPopup.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+closeButton.onclick = function() {
+    modalPopup.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modalPopup) {
+        modalPopup.style.display = "none";
+    }
+}
+
+// Add click event to each list item to open the modal
+var consultations = document.querySelectorAll('.consultation-list li');
+consultations.forEach(function(consulta) {
+    consulta.addEventListener('click', function() {
+        var details = consulta.getAttribute('data-detalhes');
+        var location = consulta.getAttribute('data-localizacao');
+        var contact = consulta.getAttribute('data-contato');
+        var status = consulta.getAttribute('data-status');
+        var instructions = consulta.getAttribute('data-instrucoes');
+        var notes = consulta.getAttribute('data-notas');
+        var videoLink = "/PAGINACONFERENCIA/paginaConferencia.html";
+        openModal(details, location, contact, status, instructions, notes, videoLink);
+    });
+});
+
+

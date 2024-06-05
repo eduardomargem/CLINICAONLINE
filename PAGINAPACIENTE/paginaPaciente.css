@@ -34,19 +34,33 @@ body {
     height: 780px;
 }
 
+.cadastro-box {
+    background-color:#14181D;
+    padding: 30px;
+    border-radius: 5px;
+    width: 1090px;
+    max-height: calc(100vh - 10px); 
+    overflow-y: auto;
+    scrollbar-width: none;
+    color: white;
+   
+}
 
 .container {
     background-color: #14181D;
     padding: 20px;
     border-radius: 3px;
     color: white;
-    width: 800px;
+    width: 96%;
+    height: 400px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     margin-bottom: 20px;
 }
 
 .container h1 {
     margin-bottom: 20px;
+    font-size: 25px;
+    
 }
 
 .content {
@@ -59,11 +73,13 @@ body {
 }
 
 .lista-consultas h2, .diagnosticos-tratamentos h2 {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    color: #5aa07e;
+    font-size: 15PX;
 }
 
 .lista-consultas ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
 }
 
@@ -311,4 +327,97 @@ body {
     padding: 10px;
     margin: 0px;
     text-align: center;
+}
+body {
+    font-family: Arial, sans-serif;
+}
+
+.main-container {
+    background-color: #14181D;
+    padding: 20px;
+    border-radius: 3px;
+    color: white;
+    width: 96%;
+    height: 400px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+    
+}
+
+.consultation-list ul {
+    list-style: none;
+    padding: 0;
+    
+}
+.consultation-list h2{
+    margin-bottom: 5px;
+    color: #5aa07e;
+    font-size: 15PX;
+}
+.main-container h1{
+    color: white;
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+.consultation-list li {
+    background-color: rgba(255, 255, 255, 0.1);
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.modal-popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-popup-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #14181D;
+    padding: 20px;
+    border: 1px solid #363131;
+    width: 40%;
+    border-radius: 3px;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#videoConferenceButton {
+    padding: 10px 20px;
+    background-color: #167145;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 100%;
+}
+
+#videoConferenceButton:hover {
+    background-color: #115434;
 }

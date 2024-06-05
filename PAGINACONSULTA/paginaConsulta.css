@@ -40,24 +40,7 @@ body {
     text-decoration: none;
 }
 
-.header .nav {
-    display: flex;
-    gap: 15px;
-}
 
-.header .nav a {
-    background-color: #167145;
-    color: white;
-    padding: 5px 50px;
-    text-decoration: none;
-    border-radius: 3px;
-    transition: background-color 0.3s;
-    margin-right: 30px;
-}
-
-.header .nav a:hover {
-    background-color: #115434;
-}
 
 .cadastro-box {
     background-color:#14181D;

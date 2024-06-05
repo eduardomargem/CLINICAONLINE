@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CareConnect</title>
     <link rel="stylesheet" href="paginaPaciente.css">
 </head>
+
 <body>
     <header class="navbar">
         <a class="logo" href="/PAGINAINICIAL/paginaInicial.html">CareConnect</a>
@@ -30,24 +32,59 @@
         </div>
     </header>
     <div class="pt1">
-        <div class="container">
-            <h1>Histórico de consultas</h1>
-            <div class="content">
-                <div class="lista-consultas">
-                    <h2>Lista de Consultas</h2>
-                    <ul>
-                        <li data-consulta="clinica-geral"><span>CLÍNICA GERAL</span> <span>Dr. João</span></li>
-                        <li data-consulta="cardiologia"><span>CARDIOLOGIA</span> <span>Dr. Felipe</span></li>
-                        <li data-consulta="oftalmologia"><span>OFTALMOLOGIA</span> <span>Dr. Fernando</span></li>
-                        <li data-consulta="ginecologia"><span>GINECOLOGIA</span> <span>Dr. Rosana</span></li>
-                        <li data-consulta="neurologia"><span>NEUROLOGIA</span> <span>Dr. Marilene</span></li>
-                        <li data-consulta="nutricionista"><span>NUTRICIONISTA</span> <span>Dr. Paloma</span></li>
-                    </ul>
+        <div class="cadastro-box">
+            <h1>Área do Paciente</h1>
+            
+            <div class="main-container">
+                <h1>Consultas Agendadas</h1>
+                <div class="main-content">
+                    <div class="consultation-list">
+                        <h2>LISTA DE CONSULTAS</h2>
+                        <ul>
+                            <li data-consulta="clinica-geral" data-detalhes="Consulta com Dr. João em 10/06/2024 às 10:00" data-localizacao="Consultório A" data-contato="(11) 1234-5678" data-status="Confirmado" data-instrucoes="Jejum de 8 horas" data-notas="Levar resultados de exames anteriores."><span>CLÍNICA GERAL</span> <span>Dr. João</span></li>
+                            <li data-consulta="cardiologia" data-detalhes="Consulta com Dr. Felipe em 11/06/2024 às 11:00" data-localizacao="Consultório B" data-contato="(11) 2345-6789" data-status="Confirmado" data-instrucoes="Evitar cafeína 24h antes" data-notas="Trazer histórico médico."><span>CARDIOLOGIA</span> <span>Dr. Felipe</span></li>
+                            <li data-consulta="oftalmologia" data-detalhes="Consulta com Dr. Fernando em 12/06/2024 às 09:00" data-localizacao="Consultório C" data-contato="(11) 3456-7890" data-status="Pendente" data-instrucoes="Usar óculos de sol" data-notas="Trazer receita anterior."><span>OFTALMOLOGIA</span> <span>Dr. Fernando</span></li>
+                            <li data-consulta="ginecologia" data-detalhes="Consulta com Dr. Rosana em 13/06/2024 às 14:00" data-localizacao="Consultório D" data-contato="(11) 4567-8901" data-status="Confirmado" data-instrucoes="Evitar relações sexuais 48h antes" data-notas="Trazer exames recentes."><span>GINECOLOGIA</span> <span>Dr. Rosana</span></li>
+                            <li data-consulta="neurologia" data-detalhes="Consulta com Dr. Marilene em 14/06/2024 às 15:00" data-localizacao="Consultório E" data-contato="(11) 5678-9012" data-status="Confirmado" data-instrucoes="Dormir bem na noite anterior" data-notas="Anotar sintomas recentes."><span>NEUROLOGIA</span> <span>Dr. Marilene</span></li>
+                            <li data-consulta="nutricionista" data-detalhes="Consulta com Dr. Paloma em 15/06/2024 às 08:00" data-localizacao="Consultório F" data-contato="(11) 6789-0123" data-status="Confirmado" data-instrucoes="Anotar alimentos consumidos na última semana" data-notas="Trazer resultados de exames de sangue."><span>NUTRICIONISTA</span> <span>Dr. Paloma</span></li>
+                        </ul>
+                    </div>
+                </div>  
+            </div>
+        
+            <!-- Modal Pop-up -->
+            <div id="consultationModal" class="modal-popup">
+                <div class="modal-popup-content">
+                    <span class="close-button">&times;</span>
+                    <h2>Detalhes da Consulta</h2>
+                    <p id="consultationDetails"></p>
+                    <p><strong>Localização:</strong> <span id="consultationLocation"></span></p>
+                    <p><strong>Contato:</strong> <span id="consultationContact"></span></p>
+                    <p><strong>Status:</strong> <span id="consultationStatus"></span></p>
+                    <p><strong>Instruções:</strong> <span id="consultationInstructions"></span></p>
+                    <p><strong>Notas:</strong> <span id="consultationNotes"></span></p>
+                    <button id="videoConferenceButton">Ir para Videoconferência</button>
+                </div>
+            </div>
+            <div class="container">
+                <h1>Histórico de consultas</h1>
+                <div class="content">
+                    <div class="lista-consultas">
+                        <h2>LISTA DE CONSULTAS</h2>
+                        <ul>
+                            <li data-consulta="clinica-geral"><span>CLÍNICA GERAL</span> <span>Dr. João</span></li>
+                            <li data-consulta="cardiologia"><span>CARDIOLOGIA</span> <span>Dr. Felipe</span></li>
+                            <li data-consulta="oftalmologia"><span>OFTALMOLOGIA</span> <span>Dr. Fernando</span></li>
+                            <li data-consulta="ginecologia"><span>GINECOLOGIA</span> <span>Dr. Rosana</span></li>
+                            <li data-consulta="neurologia"><span>NEUROLOGIA</span> <span>Dr. Marilene</span></li>
+                            <li data-consulta="nutricionista"><span>NUTRICIONISTA</span> <span>Dr. Paloma</span></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    
+
 
     <!-- Pop-up modal -->
     <div class="modal" id="modal">
@@ -111,4 +148,5 @@
     </footer>
     <script src="paginaPaciente.js"></script>
 </body>
+
 </html>
