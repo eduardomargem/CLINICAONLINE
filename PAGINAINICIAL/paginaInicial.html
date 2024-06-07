@@ -9,62 +9,63 @@
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Katibeh&display=swap');
-        </style>
+    </style>
 </head>
 
 <body>
+    
+    <header class="header">
+        <h1 class="logo">CareConnect</h1>
+        <div>
+            <a href="/PAGINALOGIN/paginaLogin.html" class="login-button">Entrar </a> <p>/</p>
+            <a href="/PAGINACADASTRO/paginaCadastro.html" class="cadastro-button">Cadastrar</a>
+        </header>
+    </div>
+    <!--Links das Fontes e dos Icones-->
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <!--Sidebar-->
+    <input type="checkbox" id="check">
+    <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+
+        <header>Menu</header>
+
+        <a href="/PAGINALOGIN/paginaLogin.html" class="link-sidebar active">
+            <i class="fas fa-qrcode"></i>
+            <span>Área do Paciente</span>
+        </a>
+
+        <a href="/PAGINACONSULTA/paginaConsulta.html" class="link-sidebar">
+            <i class="fas fa-link"></i>
+            <span>Consultas</span>
+        </a>
+
+        <a href="#" class="link-sidebar">
+            <i class="fas fa-edit"></i>
+            <span>Profissionais</span>
+        </a>
+        <a href="#contato" class="link-sidebar">
+            <i class="far fa-question-circle"></i>
+            <span>Sobre</span>
+        </a>
+
+        <a href="#contato" class="link-sidebar">
+            <i class="fas fa-sliders-h"></i>
+            <span>Serviços</span>
+        </a>
+
+        <a href="#contato" class="link-sidebar">
+            <i class="far fa-envelope"></i>
+            <span>Contato</span>
+        </a>
+    </div>
+    <!--Sidebar-->
     <!-- div pt1 se refere a primeira parte do site até onde contém o ícone do whatsapp -->
     <div class="pt1">
-        <!--Links das Fontes e dos Icones-->
-        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-        <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-        <!--Sidebar-->
-        <input type="checkbox" id="check">
-        <label for="check">
-            <i class="fas fa-bars" id="btn"></i>
-            <i class="fas fa-times" id="cancel"></i>
-        </label>
-        <div class="sidebar">
-
-            <header>Menu</header>
-
-            <a href="/PAGINALOGIN/paginaLogin.html" class="link-sidebar active">
-                <i class="fas fa-qrcode"></i>
-                <span>Área do Paciente</span>
-            </a>
-
-            <a href="/PAGINACONSULTA/paginaConsulta.html" class="link-sidebar">
-                <i class="fas fa-link"></i>
-                <span>Consultas</span>
-            </a>
-
-            <a href="#" class="link-sidebar">
-                <i class="fas fa-edit"></i>
-                <span>Profissionais</span>
-            </a>
-            <a href="#contato" class="link-sidebar">
-                <i class="far fa-question-circle"></i>
-                <span>Sobre</span>
-            </a>
-
-            <a href="#contato" class="link-sidebar">
-                <i class="fas fa-sliders-h"></i>
-                <span>Serviços</span>
-            </a>
-
-            <a href="#contato" class="link-sidebar">
-                <i class="far fa-envelope"></i>
-                <span>Contato</span>
-            </a>
-        </div>
-        <!--Sidebar-->
-        <header class="header">
-            
-            <h1 class="logo">CareConnect</h1>
-            <div>
-                <a href="/PAGINALOGIN/paginaLogin.html" class="login-button">Entrar / Cadastrar</a>
-            </div>
-        </header>
         <div class="container">
             <div class="row">
                 <div class="block1">
@@ -78,8 +79,7 @@
                         no conforto de sua casa. </h2>
 
                 </div>
-                <p class="botaoAgendar"><a class="agenda-button" href="/PAGINALOGIN/paginaLogin.html">Agendar Consulta</a>
-                </p>
+                <p class="botaoAgendar"><a id="agendaconsulta" class="agenda-button">Agendar Consulta</a></p>
                 <div class="busque">
                     <input type="text" placeholder="Busque por profissional, serviço, especialidade...">
                     <a class="button-pesquisar" href="https://google.com">Pesquisar</button>
@@ -134,16 +134,16 @@
             <div class="feed1">
                 <div class="feedback-box">
                     <div class="avatar">
-                        <img src="/assets/feedbackperfil.jpg" alt="Avatar do Paciente">
+                        <img src="/assets/adultoFeminino.jpg" alt="Avatar do Paciente">
                     </div>
                     <div class="feedback">
-                        <p>O atendimento foi excelente! Estou muito satisfeito com o serviço prestado.</p>
-                        <p class="client-name">João da Silva</p>
+                        <p>"Embora minha experiência geral com a clínica online tenha sido positiva, gostaria de sugerir melhorias na interface do usuário do site. Algumas seções parecem um pouco confusas e poderiam ser mais intuitivas para navegar."</p>
+                        <p class="client-name">Rosana da Costa</p>
                     </div>
                 </div>
                 <div class="feedback-box">
                     <div class="avatar">
-                        <img src="/assets/feedbackperfil.jpg" alt="Avatar do Paciente">
+                        <img src="/assets/jovemMasculino.jpg" alt="Avatar do Paciente">
                     </div>
                     <div class="feedback">
                         <p>O atendimento foi excelente! Estou muito satisfeito com o serviço prestado.</p>
@@ -154,20 +154,20 @@
             <div class="feed2">
                 <div class="feedback-box">
                     <div class="avatar">
-                        <img src="/assets/feedbackperfil.jpg" alt="Avatar do Paciente">
+                        <img src="/assets/idosoMasculino.jpg" alt="Avatar do Paciente">
                     </div>
                     <div class="feedback">
-                        <p>O atendimento foi excelente! Estou muito satisfeito com o serviço prestado.</p>
-                        <p class="client-name">João da Silva</p>
+                        <p>"Estou muito satisfeito com o serviço da clínica online. O processo de agendamento de consultas foi simples e eficiente, e a equipe médica foi extremamente atenciosa durante minha consulta virtual. Recomendo fortemente!"</p>
+                        <p class="client-name">Bernardo Solene</p>
                     </div>
                 </div>
                 <div class="feedback-box">
                     <div class="avatar">
-                        <img src="/assets/feedbackperfil.jpg" alt="Avatar do Paciente">
+                        <img src="/assets/jovemFeminino.jpg" alt="Avatar do Paciente">
                     </div>
                     <div class="feedback">
-                        <p>O atendimento foi excelente! Estou muito satisfeito com o serviço prestado.</p>
-                        <p class="client-name">João da Silva</p>
+                        <p>"Quero expressar minha gratidão à equipe da clínica online pela excelente assistência que recebi durante minha última consulta. O médico foi extremamente profissional e atencioso, respondendo a todas as minhas perguntas com clareza e paciência."</p>
+                        <p class="client-name">Mariana Lopes</p>
                     </div>
                 </div>
             </div>

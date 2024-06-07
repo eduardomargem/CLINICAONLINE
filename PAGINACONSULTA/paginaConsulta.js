@@ -208,19 +208,19 @@ selectEspecialidades.addEventListener('change', function() {
 });
 
 
-// script.js
+// Evento de login cabeçalho
 document.addEventListener('DOMContentLoaded', function() {
     const isLoggedIn = () => {
-        return localStorage.getItem('loggedIn') === 'true';
+        return localStorage.getItem('usuarioLogado') === 'true';
     };
 
     const setUserLoggedIn = (loggedIn) => {
-        localStorage.setItem('loggedIn', loggedIn ? 'true' : 'false');
+        localStorage.setItem('usuarioLogado', loggedIn ? 'true' : 'false');
         updateNavbar();
     };
 
     const getUserName = () => {
-        return "Usuário";
+        return localStorage.getItem('nome') || "Usuário"; 
     };
 
     const getUserPhoto = () => {
@@ -229,7 +229,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const updateNavbar = () => {
         if (isLoggedIn()) {
-            document.getElementById('user-name').textContent = getUserName();
+            document.getElementById('nome').textContent = getUserName();
             document.getElementById('user-photo').src = getUserPhoto();
             document.getElementById('user-info').style.display = 'flex';
             document.getElementById('login-option').style.display = 'none';
@@ -247,7 +247,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.getElementById('login-button').addEventListener('click', function() {
         alert('Redirecionando para a página de login...');
-        setUserLoggedIn(true);
+        window.location.href = "/PAGINALOGIN/paginaLogin.html";
     });
 
     const hamburgerMenu = document.getElementById('hamburger-menu');
@@ -259,3 +259,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
     updateNavbar();
 });
+// Adicione o event listener ao formulário de login
+document.getElementById('login-form').addEventListener('submit', realizarLogin);

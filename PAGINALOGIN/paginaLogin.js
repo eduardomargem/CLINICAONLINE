@@ -8,18 +8,25 @@ function realizarLogin(event) {
     var senha = document.getElementById('senha').value;
 
     // Obtendo as informações do usuário armazenadas
-    var nomeArmazenado = localStorage.getItem('nome');
     var emailArmazenado = localStorage.getItem('email');
-    var cpfArmazenado = localStorage.getItem('cpf');
     var senhaArmazenada = localStorage.getItem('senha');
-    var dataNascimentoArmazenada = localStorage.getItem('dataNascimento');
 
     // Verificando as credenciais
-    if(email === emailArmazenado && senha === senhaArmazenada) {
+    if (email === emailArmazenado && senha === senhaArmazenada) {
+        var usuarioLogado = true;
         alert("Login bem-sucedido!");
-        // Redirecionar para a página inicial ou painel do usuário
-        window.location.href = "/PAGINAPACIENTE/paginaPaciente.html"; 
+
+        // Obtenha o parâmetro returnUrl da URL
+        var urlParams = new URLSearchParams(window.location.search);
+        var returnUrl = urlParams.get('returnUrl');
+
+        if (returnUrl) {
+            window.location.href = returnUrl;
+        } else {
+            window.location.href = "/PAGINAPACIENTE/paginaPaciente.html";
+        }
     } else {
+        var usuarioLogado = false;
         alert("Erro no login! Por favor, verifique seu e-mail e senha.");
     }
 }

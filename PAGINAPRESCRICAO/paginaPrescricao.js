@@ -1,68 +1,66 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const consultas = document.querySelectorAll('.lista-consultas ul li');
-    const modal = document.getElementById('modal');
-    const closeButton = document.getElementById('close-button');
-    const diagnosticosList = document.getElementById('diagnosticos-list');
-    const tratamentosList = document.getElementById('tratamentos-list');
+document.getElementById('generatePrescription').addEventListener('click', function() {
+    // Simula a geração de uma receita
+    alert('Receita gerada com sucesso!');
+});
 
-    const dadosConsultas = {
-        'clinica-geral': {
-            diagnosticos: ['Hipertensão', 'Diabetes'],
-            tratamentos: ['Dieta', 'Exercícios físicos', 'Medicação']
-        },
-        'cardiologia': {
-            diagnosticos: ['Arritmia', 'Cardiomiopatia'],
-            tratamentos: ['ECG', 'Holter', 'MAPA', 'Radiografia do tórax']
-        },
-        'oftalmologia': {
-            diagnosticos: ['Catarata', 'Glaucoma'],
-            tratamentos: ['Cirurgia', 'Colírios']
-        },
-        'ginecologia': {
-            diagnosticos: ['Endometriose', 'Miomas'],
-            tratamentos: ['Cirurgia', 'Terapia hormonal']
-        },
-        'neurologia': {
-            diagnosticos: ['Enxaqueca', 'Epilepsia'],
-            tratamentos: ['Medicação', 'Terapia']
-        },
-        'nutricionista': {
-            diagnosticos: ['Obesidade', 'Desnutrição'],
-            tratamentos: ['Plano alimentar', 'Suplementação']
+document.getElementById('sendPrescription').addEventListener('click', function() {
+    // Simula o envio da receita para uma farmácia credenciada
+    alert('Receita enviada para a farmácia credenciada!');
+});
+
+document.getElementById('integrateEHR').addEventListener('click', function() {
+    // Simula a integração com o EHR (Prontuário Eletrônico de Saúde)
+    alert('Receita integrada ao EHR com sucesso!');
+});
+
+// script.js
+document.addEventListener('DOMContentLoaded', function() {
+    const isLoggedIn = () => {
+        return localStorage.getItem('loggedIn') === 'true';
+    };
+
+    const setUserLoggedIn = (loggedIn) => {
+        localStorage.setItem('loggedIn', loggedIn ? 'true' : 'false');
+        updateNavbar();
+    };
+
+    const getUserName = () => {
+        return "Usuário";
+    };
+
+    const getUserPhoto = () => {
+        return "/assets/feedbackperfil.jpg";
+    };
+
+    const updateNavbar = () => {
+        if (isLoggedIn()) {
+            document.getElementById('user-name').textContent = getUserName();
+            document.getElementById('user-photo').src = getUserPhoto();
+            document.getElementById('user-info').style.display = 'flex';
+            document.getElementById('login-option').style.display = 'none';
+        } else {
+            document.getElementById('user-info').style.display = 'none';
+            document.getElementById('login-option').style.display = 'flex';
         }
     };
 
-    consultas.forEach(consulta => {
-        consulta.addEventListener('click', function() {
-            const consultaTipo = this.getAttribute('data-consulta');
-            const dados = dadosConsultas[consultaTipo];
-
-            diagnosticosList.innerHTML = '';
-            tratamentosList.innerHTML = '';
-
-            dados.diagnosticos.forEach(diagnostico => {
-                const li = document.createElement('li');
-                li.textContent = diagnostico;
-                diagnosticosList.appendChild(li);
-            });
-
-            dados.tratamentos.forEach(tratamento => {
-                const li = document.createElement('li');
-                li.textContent = tratamento;
-                tratamentosList.appendChild(li);
-            });
-
-            modal.style.display = 'block';
-        });
+    document.getElementById('logout-button').addEventListener('click', function() {
+        alert('Logout realizado com sucesso!');
+        setUserLoggedIn(false);
+        window.location.href = "/PAGINAINICIAL/paginaInicial.html"; 
     });
 
-    closeButton.addEventListener('click', function() {
-        modal.style.display = 'none';
+    document.getElementById('login-button').addEventListener('click', function() {
+        alert('Redirecionando para a página de login...');
+        setUserLoggedIn(true);
     });
 
-    window.addEventListener('click', function(event) {
-        if (event.target == modal) {
-            modal.style.display = 'none';
-        }
+    const hamburgerMenu = document.getElementById('hamburger-menu');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburgerMenu.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
     });
+
+    updateNavbar();
 });
