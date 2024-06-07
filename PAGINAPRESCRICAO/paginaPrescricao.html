@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +9,6 @@
         @import url('https://fonts.googleapis.com/css2?family=Katibeh&display=swap');
     </style>
 </head>
-
 <body>
     <header class="navbar">
         <a class="logo" href="/PAGINAINICIAL/paginaInicial.html">CareConnect</a>
@@ -70,10 +68,20 @@
                         <h2>Receitas</h2>
                         <form id="prescriptionForm">
                             <label for="medication">SELECIONE O MEDICAMENTO</label>
-                            <input type="text" id="medication" name="medication">
+                            <select id="medication" name="medication">
+                                <option value=""disabled selected>Selecione</option>
+                                <option value="enalapril">Enalapril</option>
+                                <option value="hidroclorotiazida">Hidroclorotiazida</option>
+                                <option value="atenolol">Atenolol</option>
+                            </select>
 
                             <label for="dosage">SELECIONE A DOSAGEM</label>
-                            <input type="text" id="dosage" name="dosage">
+                            <select id="dosage" name="dosage">
+                                <option value=""disabled selected>Selecione</option>
+                                <option value="10mg">10 mg</option>
+                                <option value="25mg">25 mg</option>
+                                <option value="50mg">50 mg</option>
+                            </select>
 
                             <label for="period">SELECIONE O PERÍODO</label>
                             <input type="text" id="period" name="period">
@@ -87,7 +95,14 @@
                     <div class="electronic-prescription">
                         <h2>Prescrição Eletrônica</h2>
                         <label for="pharmacy">SELECIONE FARMÁCIA CREDENCIADA</label>
-                        <input type="text" id="pharmacy" name="pharmacy">
+                        <select id="pharmacy" name="pharmacy">
+                            <option value=""disabled selected>Selecione</option>
+                            <option value="drogaRaia">Droga Raia</option>
+                            <option value="drogasil">Drogasil</option>
+                            <option value="pagueMenos">Pague Menos</option>
+                            <option value="extraFarma">Extra Farma</option>
+                            <option value="onofre">Onofre</option>
+                        </select>
                         <button type="button" id="sendPrescription">Enviar receita</button>
                         <button type="button" id="integrateEHR">Integrar ao EHR</button>
                     </div>
@@ -142,5 +157,4 @@
     </footer>
     <script src="paginaPrescricao.js"></script>
 </body>
-
 </html>

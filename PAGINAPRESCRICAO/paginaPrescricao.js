@@ -1,19 +1,4 @@
-document.getElementById('generatePrescription').addEventListener('click', function() {
-    // Simula a geração de uma receita
-    alert('Receita gerada com sucesso!');
-});
 
-document.getElementById('sendPrescription').addEventListener('click', function() {
-    // Simula o envio da receita para uma farmácia credenciada
-    alert('Receita enviada para a farmácia credenciada!');
-});
-
-document.getElementById('integrateEHR').addEventListener('click', function() {
-    // Simula a integração com o EHR (Prontuário Eletrônico de Saúde)
-    alert('Receita integrada ao EHR com sucesso!');
-});
-
-// script.js
 document.addEventListener('DOMContentLoaded', function() {
     const isLoggedIn = () => {
         return localStorage.getItem('loggedIn') === 'true';
@@ -63,4 +48,59 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     updateNavbar();
+});
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('prescriptionForm');
+    const medication = document.getElementById('medication');
+    const dosage = document.getElementById('dosage');
+    const period = document.getElementById('period');
+    const observations = document.getElementById('observations');
+    const pharmacy = document.getElementById('pharmacy');
+    
+    const generatePrescriptionButton = document.getElementById('generatePrescription');
+    const sendPrescriptionButton = document.getElementById('sendPrescription');
+    const integrateEHRButton = document.getElementById('integrateEHR');
+    
+    // Função para validar os campos
+    function validateFields() {
+        if (!medication.value) {
+            alert('Por favor, selecione um medicamento.');
+            return false;
+        }
+        if (!dosage.value) {
+            alert('Por favor, selecione a dosagem.');
+            return false;
+        }
+        if (!period.value) {
+            alert('Por favor, insira o período.');
+            return false;
+        }
+        return true;
+    }
+    
+    // Evento de clique para gerar receita
+    generatePrescriptionButton.addEventListener('click', function() {
+        if (validateFields()) {
+            alert('Receita gerada com sucesso!');
+            // Adicionar a lógica para gerar a receita aqui
+        }
+    });
+
+    // Evento de clique para enviar receita
+    sendPrescriptionButton.addEventListener('click', function() {
+        if (validateFields() && pharmacy.value) {
+            alert('Receita enviada com sucesso!');
+            // Adicionar a lógica para enviar a receita aqui
+        } else if (!pharmacy.value) {
+            alert('Por favor, selecione uma farmácia credenciada.');
+        }
+    });
+
+    // Evento de clique para integrar ao EHR
+    integrateEHRButton.addEventListener('click', function() {
+        if (validateFields()) {
+            alert('Receita integrada ao EHR com sucesso!');
+            // Adicionar a lógica para integrar ao EHR aqui
+        }
+    });
 });

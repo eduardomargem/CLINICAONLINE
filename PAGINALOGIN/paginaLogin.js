@@ -12,20 +12,14 @@ function realizarLogin(event) {
     var senhaArmazenada = localStorage.getItem('senha');
 
     // Verificando as credenciais
-    if (email === emailArmazenado && senha === senhaArmazenada) {
+    if(email === emailArmazenado && senha === senhaArmazenada) {
+        // Define usuarioLogado como true se as credenciais estiverem corretas
         var usuarioLogado = true;
         alert("Login bem-sucedido!");
-
-        // Obtenha o parâmetro returnUrl da URL
-        var urlParams = new URLSearchParams(window.location.search);
-        var returnUrl = urlParams.get('returnUrl');
-
-        if (returnUrl) {
-            window.location.href = returnUrl;
-        } else {
-            window.location.href = "/PAGINAPACIENTE/paginaPaciente.html";
-        }
+        // Redirecionar para a página inicial ou painel do usuário
+        window.location.href = "/PAGINAPACIENTE/paginaPaciente.html"; 
     } else {
+        // Define usuarioLogado como false se as credenciais estiverem incorretas
         var usuarioLogado = false;
         alert("Erro no login! Por favor, verifique seu e-mail e senha.");
     }
@@ -33,3 +27,4 @@ function realizarLogin(event) {
 
 // Adicionando o evento de submit ao formulário
 document.getElementById('formularioLogin').addEventListener('submit', realizarLogin);
+
