@@ -24,24 +24,6 @@ body {
     height: 780px;
 }
 
-.header .logo {
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
-    margin-right: auto;
-    margin-left: 40px;
-    text-decoration: none;
-}
-.logo{
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
-    
-    text-decoration: none;
-}
-
-
-
 .cadastro-box {
     background-color:#14181D;
     padding: 30px;
@@ -236,7 +218,7 @@ body {
     border-radius: 3px;
     position: relative;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    min-height: 65%; /* Definindo uma altura máxima em relação à altura da tela */
+    min-height: 70%; /* Definindo uma altura máxima em relação à altura da tela */
     overflow-y: auto;
     color: white;
     padding: 30px;
@@ -298,10 +280,19 @@ body {
 }
 
 .logo {
-    font-size: 1.5em;
+    transition: color 0.3s;
     font-weight: bold;
+    color: #fff;
+    font-family: "Katibeh", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 40px;
+    margin-top: -10px;
+    text-decoration: none;
 }
-
+.logo:hover{
+    color: #5aa07e;
+}
 .nav-links {
     display: none;
     flex-direction: column;

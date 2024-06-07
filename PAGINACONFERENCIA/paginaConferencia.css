@@ -20,10 +20,19 @@ body {
 }
 
 .logo {
-    font-size: 1.5em;
+    transition: color 0.3s;
     font-weight: bold;
+    color: #fff;
+    font-family: "Katibeh", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 40px;
+    margin-top: -10px;
+    text-decoration: none;
 }
-
+.logo:hover{
+    color: #5aa07e;
+}
 .nav-links {
     display: none;
     flex-direction: column;
@@ -113,21 +122,7 @@ body {
         display: none;
     }
 }
-.header .logo {
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
-    margin-right: auto;
-    margin-left: 40px;
-    text-decoration: none;
-}
-.logo{
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
-    
-    text-decoration: none;
-}
+
 .pt1 {
     background-image: url('/assets/pexels-cedric-fauntleroy-4266935.jpg');
     background-size: cover;

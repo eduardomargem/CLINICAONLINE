@@ -184,10 +184,18 @@ body {
 }
 
 .logo {
-    font-size: 1.5em;
+    transition: color 0.3s;
     font-weight: bold;
+    color: #fff;
+    font-family: "Katibeh", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 40px;
+    margin-top: -10px;
 }
-
+.logo:hover{
+    color: #5aa07e;
+}
 .nav-links {
     display: none;
     flex-direction: column;
@@ -242,19 +250,7 @@ body {
     background-color: #5aa07e;
 }
 
-.hamburger-menu {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-}
 
-.hamburger-menu span {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    transition: all 0.3s;
-}
 
 .nav-links.active {
     display: flex;

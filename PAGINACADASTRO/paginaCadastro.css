@@ -14,9 +14,21 @@ body {
     height: 100vh;
     overflow: hidden;
 }
-
+.voltar{
+    background-image: url(/assets/seta.png);
+    background-size: cover;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+    border-radius: 50px;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+}
+.voltar:hover{
+    background-color: #f2f2f234;
+}
 .cadastro-box {
-    background-color:#313338;
+    background-color:#14181D;
     padding: 30px;
     border-radius: 5px;
     width: 440px;

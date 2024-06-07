@@ -11,11 +11,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-   
     object-fit: cover;
     height: 780px;
 }
-/* styles.css */
 
 .navbar {
     display: flex;
@@ -27,10 +25,19 @@ body {
 }
 
 .logo {
-    font-size: 1.5em;
+    transition: color 0.3s;
     font-weight: bold;
+    color: #fff;
+    font-family: "Katibeh", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 40px;
+    margin-top: -10px;
+    text-decoration: none;
 }
-
+.logo:hover{
+    color: #5aa07e;
+}
 .nav-links {
     display: none;
     flex-direction: column;
@@ -120,21 +127,7 @@ body {
         display: none;
     }
 }
-.header .logo {
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
-    margin-right: auto;
-    margin-left: 40px;
-    text-decoration: none;
-}
-.logo{
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
-    
-    text-decoration: none;
-}
+
 
 .cadastro-box {
     background-color:#14181D;
@@ -225,7 +218,7 @@ button {
     
 }
 .prescriptions button{
-    width: 350px;
+    width: 395px;
 }
 button:hover {
     background-color: #115434;
